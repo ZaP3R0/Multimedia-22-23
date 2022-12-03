@@ -1,46 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Menu </title>
-    <link rel="stylesheet" href="./styles/estilos.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
-</head>
-<body>
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-        <a href ="#" class="enlace">
-            <img src="logo.png" alt="" class="logo">
-        </a>
-       <ul>
-            <li>
-                <a class="active" href="#">Inicio</a>
-            </li>
-            <li>
-                <a href="./quiz.html">Hola</a>
-            </li>
-            <li>
-                <a href="#">Caracola</a>
-            </li>
-       </ul>
-        
-    </nav>
-    <section>
-        <div class="video">
-            <video src="">
-            </video>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Interactivo</title>
+    <link rel="icon" type="image/png" href="./img/icone-html-bleue.png">
+    <link rel="stylesheet" href="./styles/estilos.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="#" class="logo nav-link">Logo</a>
+        <button class="nav-toggle" aria-label="Abrir menú">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu">
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link nav-link">Video</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="./quiz.html" class="nav-menu-link nav-link">CUESTIONARIO</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <script defer src="player.js"></script>
+    <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
+
+    <footer>
+        <div class="container-footer">
+            <div class="redes-sociales">
+                <a href=""><i class="fab fa-github"></i></a>
+            </div>
+            <div class="contenedor-footer">
+                <p class="copy">©Copyright 2022</p>
+            </div>
         </div>
-        <div class="linea">
-            <button class="play">
-                Play
-            </button>
-        </div>
-    </section>
-    <script src="player.js"></script>
-</body>
+    </footer>
+   
+  </body>
 </html>

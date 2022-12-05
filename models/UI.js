@@ -32,9 +32,9 @@ export class UI {
 
     showScores(score) {
         const gameOverHTML = `
-          <h1>Result</h1>
-          <h2 id="score">Your scores: ${score}</h2>
-          <button class="btnInicio" onclick="window.location.href='./index.html'">Inicio</button>
+          <h1 class="animated-shadow-2">Resultado</h1>
+          <h2 class="score" id="score">Tu puntuación: ${score}</h2>
+          <button class="btnInicio" onclick="window.location.href='./index.html'">Volver</button>
           `;
         // <h2 id="score">Your scores: ${quiz.score}</h2>
     
@@ -44,6 +44,6 @@ export class UI {
 
     showProgress(currentIndex, total) {
         var element = document.getElementById("progress");
-        element.innerHTML = `Question ${currentIndex} of ${total}`;
+        element.innerHTML = `Pregunta ${currentIndex} de ${total}`;
     }
 }

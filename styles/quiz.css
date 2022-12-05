@@ -5,7 +5,7 @@ html, body {
 
 
 body {
-    background: #b6b6b6;
+    background: #0769e9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,25 +14,19 @@ body {
 
 #quiz {
    background: white;
-   width: 30rem;
+   width: 30em;
+   flex-wrap: wrap;
    padding: 4rem;
-   text-align: center; 
-}
-
-h1 {
-    color: yellow;
-    font-size: 60px;
-    text-align: center;
-    padding: 2px 0;
+   text-align: center;
 }
 
 #question {
     font-size: 30px;
-    color: red;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .button {
-    background-color: red;
+    background-color: #0769e9;
     color: white;
     width: 250px;
     font-size: 20px;
@@ -43,12 +37,108 @@ h1 {
 
 .button:hover {
     cursor: pointer;
-    background: #9b010191;
+    background: #083057;
+}
+
+hr {border: 0; 
+    height: 0; 
+    box-shadow: 0 1px 5px 1px darkblue;
+}
+
+ .animated-shadow {
+   font: normal 100px Varela Round, sans-serif;
+   padding: 2px 0;
+   letter-spacing: 5px;
+   text-align: center;
+   text-align: center;
+   text-transform: uppercase;
+   animation: move linear 2000ms infinite;
+   z-index: 2
+ }
+
+ .animated-shadow-2 {
+    font: normal 40px Varela Round, sans-serif;
+    padding: 2px 0;
+    letter-spacing: 5px;
+    text-align: center;
+    text-align: center;
+    text-transform: uppercase;
+    animation: move linear 2000ms infinite;
+    z-index: 2
+  }
+ /*Animación para rotar las sombras*/
+ @keyframes move {
+   0% {
+     text-shadow:
+       4px -4px 0 #da0641,
+       3px -3px 0 #da0641,
+       2px -2px 0 #da0641,
+       1px -1px 0 #da0641,
+       -4px 4px 0 #13f1fc,
+       -3px 3px 0 #13f1fc,
+       -2px 2px 0 #13f1fc,
+       -1px 1px 0 #13f1fc
+     ;
+   }
+   25% {
+     text-shadow:
+       -4px -4px 0 #13f1fc,
+       -3px -3px 0 #13f1fc,
+       -2px -2px 0 #13f1fc,
+       -1px -1px 0 #13f1fc,
+       4px 4px 0 #da0641,
+       3px 3px 0 #da0641,
+       2px 2px 0 #da0641,
+       1px 1px 0 #da0641
+     ;
+   }
+   50% {
+     text-shadow:
+       -4px 4px 0 #da0641,
+       -3px 3px 0 #da0641,
+       -2px 2px 0 #da0641,
+       -1px 1px 0 #da0641,
+       4px -4px 0 #13f1fc,
+       3px -3px 0 #13f1fc,
+       2px -2px 0 #13f1fc,
+       1px -1px 0 #13f1fc
+     ;
+   }
+   75% {
+     text-shadow:
+       4px 4px 0 #13f1fc,
+       3px 3px 0 #13f1fc,
+       2px 2px 0 #13f1fc,
+       1px 1px 0 #13f1fc,
+       -4px -4px 0 #da0641,
+       -3px -3px 0 #da0641,
+       -2px -2px 0 #da0641,
+       -1px -1px 0 #da0641
+     ;
+   }
+   100% {
+     text-shadow:
+       4px -4px 0 #da0641,
+       3px -3px 0 #da0641,
+       2px -2px 0 #da0641,
+       1px -1px 0 #da0641,
+       -4px 4px 0 #13f1fc,
+       -3px 3px 0 #13f1fc,
+       -2px 2px 0 #13f1fc,
+       -1px 1px 0 #13f1fc
+     ;
+   }
+ }
+
+.score {
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #progress {
     font-size: 20px;
     color: black;
+    font-weight: bold;
+    font-family: sans-serif;
 }
 
 .btnInicio {
@@ -58,5 +148,15 @@ h1 {
     max-width: 80px;
     text-align: center;
     height: 40px;
+    background-color: #0769e9;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
 }
+
+.btnInicio:hover {
+    cursor: pointer;
+    background: #083057;
+}
+
 

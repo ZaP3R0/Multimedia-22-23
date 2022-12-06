@@ -38,10 +38,10 @@
   }
 
   .logo {
-    font-size: 30px;
-    font-weight: bold;
     padding: 0 40px;
     line-height: 80px;
+    height: 70px;
+    width: auto;
   }
   
   .nav-menu {

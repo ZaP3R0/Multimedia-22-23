@@ -1,0 +1,85 @@
+[
+    {
+        "pregunta": "¿Quién metió el gol de la final del mundial 2010?",
+        "respuesta": "Andrés Iniesta",
+        "incorrecta1": "David Villa",
+        "incorrecta2": "Fernando Torres",
+        "incorrecta3": "David Silva",
+        "imagen": "img/fotonoticia_20200711070047_1200.jpg",
+        "objectFit": "cover"
+    },
+    {
+        "pregunta": "¿Cuantas eurocopas ha ganado la selección española?",
+        "respuesta": "3",
+        "incorrecta1": "1",
+        "incorrecta2": "5",
+        "incorrecta3": "2",
+        "imagen": "img/trofeo_euro.jpeg",
+        "objectFit": "cover"
+    },
+    {
+        "pregunta": "¿Quién es el jugador español que más veces ha vestido la camiseta de la selección absoluta?",
+        "respuesta": "Iker Casillas",
+        "incorrecta1": "Fernando Hierro",
+        "incorrecta2": "Xavi Hernández",
+        "incorrecta3": "Andoni Zubizarreta",
+        "imagen": "img/escudo_españa.jpg",
+        "objectFit": "cover"
+    },
+    {
+        "pregunta": "¿Quién es el máximo goleador de la selección española?",
+        "respuesta": "David Villa",
+        "incorrecta1": "Raul González",
+        "incorrecta2": "Telmo Zarra",
+        "incorrecta3": "Enrique Casto 'Quini'",
+        "imagen": "img/98.jpeg"
+    },
+    {
+        "pregunta": "¿Cuál ha sido la mayor goleada de la selección española?",
+        "respuesta": "España 13 - 0 Bulgaría",
+        "incorrecta1": "España 12 - 0 Bielorrusia",
+        "incorrecta2": "España 14 - 1 Lietchtenstein",
+        "incorrecta3": "España 12 - 1 Malta",
+        "imagen": "img/foto_antigua.jpg"
+    },
+    {
+        "pregunta": "¿Quién de estos jugadores es el más malo de la selección española actual?",
+        "respuesta": "Eric García",
+        "incorrecta1": "Koke",
+        "incorrecta2": "Ferrán Torres",
+        "incorrecta3": "Dani Olmo",
+        "imagen": "img/luis_enrique_fachero.jpeg"
+    },
+    {
+        "pregunta": "¿Con qué entrenador ganó España su primera Eurocopa?",
+        "respuesta": "José Villalonga",
+        "incorrecta1": "Vicente del Bosque",
+        "incorrecta2": "Iñaki Sáez",
+        "incorrecta3": "Luis Aragonés",
+        "imagen": "img/entrenador.jpg"
+    },
+    {
+        "pregunta": "¿Cuál es el jugador de la selección con más partidos sin anotar un solo gol?",
+        "respuesta": "José Antonio Camacho",
+        "incorrecta1": "Alvaro Arbeloa",
+        "incorrecta2": "David Albelda",
+        "incorrecta3": "Sergio Busquets",
+        "imagen": "img/espana-checa8.jpg"
+    },
+    {
+        "pregunta": "¿Quién es el jugador de la selección española más veterano en marcar un gol?",
+        "respuesta": "Aritz Aduriz",
+        "incorrecta1": "Alfredo Di Stéfano",
+        "incorrecta2": "David Villa",
+        "incorrecta3": "José María Peña",
+        "imagen": "img/actual.jpg"
+    },
+    {
+        "pregunta": "¿Cuál de estos jugadores no ha sido nunca internacional absoluto?",
+        "respuesta": "Xabi Prieto",
+        "incorrecta1": "Bojan Krkic",
+        "incorrecta2": "Catanha",
+        "incorrecta3": "Antonio Guayre",
+        "imagen": "img/entrenamiento.jpg"
+    }
+]

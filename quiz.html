@@ -1,32 +1,37 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de la Selección Española</title>
     <link rel="stylesheet" href="./styles/quiz.css">
-    <title>World Cup 2010 Quiz</title>
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.all.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="contenedor">
+        <div class="puntuacion" id="puntuacion"></div>
+        <div class="encabezado">
+            <div class="animated-shadow">QUIZ</div>
+            <div class="numero" id="numero"></div>
+            <div class="pregunta" id="pregunta"></div>
 
-<body>
-    <div id="quiz">
-        <h1 class="animated-shadow">QUIZ</h1>
-       
-        <hr>
-        <h2 id="question"></h2>
+            <img src="#" class="imagen" id="imagen">
+        </div>
 
-        <div id="choices"></div>
+        <div class="btn" id="btn1" onclick="oprimir_btn(0)"></div>
+        <div class="btn" id="btn2" onclick="oprimir_btn(1)"></div>
+        <div class="btn" id="btn3" onclick="oprimir_btn(2)"></div>
+        <div class="btn" id="btn4" onclick="oprimir_btn(3)"></div>
+
+        <div class="contenedor-btnInicio">
+            <button onclick="window.location.href='./index.html'" class="btnInicio">Inicio</button>
+            <button class="btnReiniciar">Reiniciar</button>
+        </div>
+          
         
-        <hr style="margin-top: 50px" />
-        <footer>
-            <p id="progress"></p>
-        </footer>
+              
+        <script src="js/quiz.js"></script>
     </div>
-
-    <!--Scripts-->
-    <!--Para exportar las preguntas hay que poner module-->
-    <script src="app.js" type="module"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    
-</body>
+  
+  </body>
 </html>

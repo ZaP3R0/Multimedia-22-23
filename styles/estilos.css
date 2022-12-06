@@ -30,6 +30,12 @@
     max-width: 1200px;
     margin: 0 auto;
   }
+
+  .nav .rfef {
+    margin-top: 4px;
+    justify-content: center;
+    height: 70px;
+  }
   
   .nav-link {
     color: white;
@@ -134,9 +140,14 @@
     }
   
     .logo {
-      font-size: 25px;
       padding: 0 20px;
       line-height: 60px;
+      height: 55px;
+    }
+
+    .nav .rfef {
+      margin-top: 5px;
+      height: 50px;
     }
   
     .nav-menu {
@@ -178,3 +189,4 @@
       outline: none;
     }
 }
+

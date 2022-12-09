@@ -1,0 +1,23 @@
+[
+    {
+        "jugador": "Iniesta",
+        "imagen": "img/iniesta.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Casillas",
+        "imagen": "img/Casillas.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Fernando Torres",
+        "imagen": "img/Torres.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "David Villa",
+        "imagen": "img/Villa.png",
+        "objectFit": "cover"
+    }
+
+]

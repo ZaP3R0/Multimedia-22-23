@@ -11,15 +11,48 @@ body {
 }
 
 .image {
-    width: 120px;
+    width: 150px;
 }
 
 h1, h2 {
     text-align: center;
 }
 
+h2 {
+    font-family: sans-serif;
+    font-size: 30px;
+    color: #fcd20a;
+    font-weight: bold;
+}
+
+.contenedor-btnInicio button {
+    border-radius: 10px;
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    background: #000056;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 500ms ease;
+    font-family: sans-serif;
+    border: 5px solid black;
+    margin: 40px;
+}
+
+.contenedor-btnInicio button:hover {
+    background: rgb(1, 1, 161);
+    transform: scale(1.1);
+}
+
+.contenedor-btnInicio {
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+}
+
 .main-container {
-    border: 2px solid white;
     width: 90%;
     margin: 50px auto;
     display: flex;
@@ -28,8 +61,8 @@ h1, h2 {
 }
 
 .drag-elements, .drop-elements{
-    border: 2px solid black;
     display: flex;
+    flex-wrap: wrap;
     min-height: 230px;
     justify-content: space-around;
     padding: 24px;
@@ -37,16 +70,162 @@ h1, h2 {
 
 }
 
+.animated-shadow {
+    font: normal 50px Varela Round, sans-serif;
+    padding: 2px 0;
+    color: yellow;
+    letter-spacing: 5px;
+    text-align: center;
+    text-align: center;
+    text-transform: uppercase;
+    animation: move linear 2000ms infinite;
+    z-index: 2
+  }
+   
+  /*Animación para rotar las sombras*/
+  @keyframes move {
+    0% {
+      text-shadow:
+        4px -4px 0 #da0641,
+        3px -3px 0 #da0641,
+        2px -2px 0 #da0641,
+        1px -1px 0 #da0641,
+        -4px 4px 0 #13f1fc,
+        -3px 3px 0 #13f1fc,
+        -2px 2px 0 #13f1fc,
+        -1px 1px 0 #13f1fc
+      ;
+    }
+    25% {
+      text-shadow:
+        -4px -4px 0 #13f1fc,
+        -3px -3px 0 #13f1fc,
+        -2px -2px 0 #13f1fc,
+        -1px -1px 0 #13f1fc,
+        4px 4px 0 #da0641,
+        3px 3px 0 #da0641,
+        2px 2px 0 #da0641,
+        1px 1px 0 #da0641
+      ;
+    }
+    50% {
+      text-shadow:
+        -4px 4px 0 #da0641,
+        -3px 3px 0 #da0641,
+        -2px 2px 0 #da0641,
+        -1px 1px 0 #da0641,
+        4px -4px 0 #13f1fc,
+        3px -3px 0 #13f1fc,
+        2px -2px 0 #13f1fc,
+        1px -1px 0 #13f1fc
+      ;
+    }
+    75% {
+      text-shadow:
+        4px 4px 0 #13f1fc,
+        3px 3px 0 #13f1fc,
+        2px 2px 0 #13f1fc,
+        1px 1px 0 #13f1fc,
+        -4px -4px 0 #da0641,
+        -3px -3px 0 #da0641,
+        -2px -2px 0 #da0641,
+        -1px -1px 0 #da0641
+      ;
+    }
+    100% {
+      text-shadow:
+        4px -4px 0 #da0641,
+        3px -3px 0 #da0641,
+        2px -2px 0 #da0641,
+        1px -1px 0 #da0641,
+        -4px 4px 0 #13f1fc,
+        -3px 3px 0 #13f1fc,
+        -2px 2px 0 #13f1fc,
+        -1px 1px 0 #13f1fc
+      ;
+    }
+  }
+
 .names {
-    border: 3px dashed white;
+    border: 3px dashed #000056;
+    color: #000056;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
     min-width: 100px;
     padding: 0 10px;
-    height: 100px;
+    height: 200px;
+    width: 200px;
     display: grid;
     place-content: center;
 }
 
 .wrong {
     text-align: center;
-    font-size: 2em;
+    font-size: 30px;
+    color: #fcd20a;
+    font-weight: bold;
+    font-family: sans-serif;
 }
+
+.win {
+    margin-top: 70px;
+    text-align: center;
+    font-size: 2em;
+    color: white;  
+}
+
+#Ramos, #Hierro, #Senna {
+    width: 134px;
+}
+
+#Unai, #Pedri, #Morata {
+    width: 190px;
+}
+
+#Carvajal, #Ansu, #Zubizarreta, #Joaquín {
+    width: 145px;
+}
+
+#Casillas {
+    width: 155px;
+}
+
+#Camacho, #Butragueño, #Guiza {
+    width: 135px;
+}
+
+#Michel {
+    width: 130px;
+}
+
+#Guardiola {
+    width: 133px;
+}
+
+#Soler, #Capdevila {
+    width: 160px;
+}
+
+#Pizzi {
+    width: 160px;
+}
+
+#Negredo, #Reina, #XAlonso {
+    width: 127px;
+}
+
+#Mata {
+    width: 150px;
+}
+
+#JMartínez {
+    width: 130px;
+}
+
+
+
+
+
+
+

@@ -1,15 +1,7 @@
-const CARD = 3;
 let jugadores = []
 let nombresJugadores = []
+let playersRandom = []
 
-function select_id(id) {
-    return document.getElementById(id);
-  }
-  
-  function style(id) {
-    return select_id(id).style;
-  }
-  
 function readText(ruta_local) {
     var texto = null;
     var xmlhttp = new XMLHttpRequest();
@@ -24,18 +16,37 @@ function readText(ruta_local) {
 
 
 window.onload = function () {
+    principal()        
+};
+
+function principal() {
     repertorio_jugadores = readText("data/jugadores.json");
     interprete_bp = JSON.parse(repertorio_jugadores);
-    jugadoresCargados = loadJugadores(interprete_bp);
-    nombresJugadores = loadNombres(interprete_bp)
 
+    jugadoresCargados = loadJugadores(interprete_bp);
+    playersRandom = jugadoresRandom(jugadoresCargados);
+
+    nombresJugadores = loadNombres(playersRandom)
     nombresDesordenados = nombresJugadores.sort(function() {return Math.random() - 0.5});
-    cargaJugadores(jugadoresCargados, nombresDesordenados);
-        
-};
+    cargaJugadores(playersRandom, nombresDesordenados);
+}
+
+function jugadoresRandom(jugadoresCargados) {
+    playersDescolocados = jugadoresCargados.sort(function() {return Math.random() - 0.5});
+
+    for(let i=0; i<6; i++) {
+        playersRandom[i] = playersDescolocados[i];
+    }
+
+    return playersRandom;
+}
+
+let drag_elements = document.querySelector('.drag-elements');
+let drop_elements = document.querySelector('.drop-elements');
 
 //Cargamos las imagenes de los jugadores 
 function cargaJugadores(jugadoresCargados, nombresDesordenados) {
+
     jugadoresCargados.forEach(jugador => {
         drag_elements.innerHTML += `
         <div class="jugador">
@@ -44,7 +55,7 @@ function cargaJugadores(jugadoresCargados, nombresDesordenados) {
         `
     });
 
-     nombresDesordenados.forEach(nombre => {
+    nombresDesordenados.forEach(nombre => {
         drop_elements.innerHTML += `
         <div class="names">
             <p>${nombre}</p>
@@ -52,12 +63,11 @@ function cargaJugadores(jugadoresCargados, nombresDesordenados) {
         `
     });
 
-    let players = document.querySelectorAll('.image')
-    players = [...players];
-
+    let players = document.querySelectorAll('.image');
+    players = [...players]
+    
     players.forEach(player => {
         player.addEventListener('dragstart', event=> {
-            console.log(event)
             event.dataTransfer.setData('text', event.target.id)
         })
     })
@@ -65,10 +75,10 @@ function cargaJugadores(jugadoresCargados, nombresDesordenados) {
     let names = document.querySelectorAll('.names')
     let wrongMsg = document.querySelector('.wrong')
     let points = 0;
+    let vidas = 3;
 
-    names = [...names];
-    console.log(names)
-    
+    names = [...names]
+        
     names.forEach(name => {
         name.addEventListener('dragover', event=>{
             event.preventDefault()
@@ -77,28 +87,50 @@ function cargaJugadores(jugadoresCargados, nombresDesordenados) {
             console.log("Evento drop", event)
             const dragElementData = event.dataTransfer.getData('text');
             
-            console.log("Element", dragElementData)
             let playerElement = document.querySelector(`#${dragElementData}`);
-            //Falla con algunos REVISAR
-            console.log("PlayerElement",playerElement)
-
+            
             if (event.target.innerText == dragElementData) {
                 points++
                 event.target.innerHTML = ''
                 event.target.appendChild(playerElement)
                 wrongMsg.innerText = ''
 
-                if (points == 4) {
-                    drag_elements.innerHTML = "Ganaste!"
+                if (points == jugadoresCargados.length) {
+                    swal.fire({
+                        title: "Juego finalizado",
+                        text: "¡GANASTE!",
+                        icon: "success"
+                    });
                 }
             } else {
+                vidas--
                 wrongMsg.innerText = "Ups!. Te has equivocado"
+
+                if (vidas == 0) {
+                    swal.fire({
+                        title: "Juego finalizado",
+                        text: "¡HAS GASTADO TODAS TUS VIDAS!",
+                        icon: "error"
+                    });
+                    
+                    exit = setTimeout(salir, 4000)
+                }
             }
         })
 
     })
 
 }
+
+function salir() {
+    location.reload()
+}
+
+const btnReinicio = document.querySelector(".btnReiniciar");
+
+btnReinicio.addEventListener("click", () => {
+    location.reload()
+});
 
 
 function loadJugadores(a) {
@@ -115,10 +147,7 @@ function loadNombres(jugadores) {
     return nombresJugadores;
 }
 
-let drag_elements = document.querySelector('.drag-elements');
-let drop_elements = document.querySelector('.drop-elements');
 
-function getRandomId(max) {
-    return Math.floor(Math.random()*max);
-}
+
+
 

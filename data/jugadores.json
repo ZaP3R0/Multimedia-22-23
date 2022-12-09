@@ -10,14 +10,198 @@
         "objectFit": "cover"
     },
     {
-        "jugador": "Fernando Torres",
+        "jugador": "Torres",
         "imagen": "img/Torres.png",
         "objectFit": "cover"
     },
     {
-        "jugador": "David Villa",
+        "jugador": "Villa",
         "imagen": "img/Villa.png",
         "objectFit": "cover"
+    },
+    {
+        "jugador": "Ramos",
+        "imagen": "img/Ramos.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Morata",
+        "imagen": "img/Morata.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Unai",
+        "imagen": "img/Unai.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Puyol",
+        "imagen": "img/Puyol.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Pedri",
+        "imagen": "img/Pedri.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Carvajal",
+        "imagen": "img/Carvajal.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Ansu",
+        "imagen": "img/Ansu.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Marchena",
+        "imagen": "img/Marchena.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Busquets",
+        "imagen": "img/Busquets.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Piqué",
+        "imagen": "img/Piqué.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Silva",
+        "imagen": "img/Silva.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Camacho",
+        "imagen": "img/Camacho.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Zubizarreta",
+        "imagen": "img/Zubizarreta.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Butragueño",
+        "imagen": "img/Butragueño.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Michel",
+        "imagen": "img/Michel.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Guardiola",
+        "imagen": "img/Guardiola.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Hierro",
+        "imagen": "img/Hierro.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Raul",
+        "imagen": "img/Raul.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Xavi",
+        "imagen": "img/Xavi.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Joaquín",
+        "imagen": "img/Joaquín.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Soler",
+        "imagen": "img/Soler.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Guiza",
+        "imagen": "img/Guiza.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Pizzi",
+        "imagen": "img/Pizzi.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Negredo",
+        "imagen": "img/Negredo.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Reina",
+        "imagen": "img/Reina.png",
+        "objectFit": "cover"
+    }, 
+    {
+        "jugador": "Senna",
+        "imagen": "img/Senna.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Mata",
+        "imagen": "img/Mata.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Llorente",
+        "imagen": "img/Llorente.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Cesc",
+        "imagen": "img/Cesc.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Albiol",
+        "imagen": "img/Albiol.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Capdevila",
+        "imagen": "img/Capdevila.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Navas",
+        "imagen": "img/Navas.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Valdés",
+        "imagen": "img/Valdés.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Arbeloa",
+        "imagen": "img/Arbeloa.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "XAlonso",
+        "imagen": "img/XAlonso.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "Pedro",
+        "imagen": "img/Pedro.png",
+        "objectFit": "cover"
+    },
+    {
+        "jugador": "JMartínez",
+        "imagen": "img/JMartínez.png",
+        "objectFit": "cover"
     }
-
 ]

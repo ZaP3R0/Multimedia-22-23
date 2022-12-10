@@ -16,10 +16,16 @@ function readText(ruta_local) {
 
 
 window.onload = function () {
-    principal()        
+    if (window.screen.width <= 950) {
+        console.log("P")
+        principalP()
+    } else {
+        console.log("G")
+        principalG()  
+    }
 };
 
-function principal() {
+function principalP() {
     repertorio_jugadores = readText("data/jugadores.json");
     interprete_bp = JSON.parse(repertorio_jugadores);
 
@@ -29,6 +35,18 @@ function principal() {
     nombresJugadores = loadNombres(playersRandom)
     nombresDesordenados = nombresJugadores.sort(function() {return Math.random() - 0.5});
     cargaJugadores(playersRandom, nombresDesordenados);
+}
+
+function principalG() {
+    repertorio_jugadores = readText("data/jugadores.json");
+    interprete_bp = JSON.parse(repertorio_jugadores);
+
+    jugadoresCargados = loadJugadores(interprete_bp);
+    playersRandom = jugadoresRandom(jugadoresCargados);
+
+    nombresJugadores = loadNombres(playersRandom)
+    nombresDesordenados = nombresJugadores.sort(function() {return Math.random() - 0.5});
+    cargaJugadoresG(playersRandom, nombresDesordenados);
 }
 
 function jugadoresRandom(jugadoresCargados) {
@@ -45,7 +63,7 @@ let drag_elements = document.querySelector('.drag-elements');
 let drop_elements = document.querySelector('.drop-elements');
 
 //Cargamos las imagenes de los jugadores 
-function cargaJugadores(jugadoresCargados, nombresDesordenados) {
+function cargaJugadoresG(jugadoresCargados, nombresDesordenados) {
 
     jugadoresCargados.forEach(jugador => {
         drag_elements.innerHTML += `
@@ -122,6 +140,81 @@ function cargaJugadores(jugadoresCargados, nombresDesordenados) {
 
 }
 
+//FUNCIÓN PARA DRAG AND DROP EN MÓVILES
+function cargaJugadores(jugadoresCargados, nombresDesordenados) {
+    jugadoresCargados.forEach(jugador => {
+        drag_elements.innerHTML += `
+        <div class="jugador">
+            <img id="${jugador.jugador}" draggable="true" class="image" src="${jugador.imagen}" alt="jugador">
+        </div>
+        `
+    });
+
+    nombresDesordenados.forEach(nombre => {
+        drop_elements.innerHTML += `
+        <div class="names">
+            <p>${nombre}</p>
+        </div>
+        `
+    });
+
+    let players = document.querySelectorAll('.image');
+    players = [...players]
+    
+    players.forEach(player => {
+        player.addEventListener('touchstart', event=> {
+            event.dataTransfer.setData('text', event.target.id)
+        })
+    })
+
+    let names = document.querySelectorAll('.names')
+    let wrongMsg = document.querySelector('.wrong')
+    let points = 0;
+    let vidas = 3;
+
+    names = [...names]
+        
+    names.forEach(name => {
+        name.addEventListener('touchmove', event=>{
+            event.preventDefault()
+        })
+        name.addEventListener('touchend', event=> {
+            const dragElementData = event.dataTransfer.getData('text');
+            
+            let playerElement = document.querySelector(`#${dragElementData}`);
+            
+            if (event.target.innerText == dragElementData) {
+                points++
+                event.target.innerHTML = ''
+                event.target.appendChild(playerElement)
+                wrongMsg.innerText = ''
+
+                if (points == jugadoresCargados.length) {
+                    swal.fire({
+                        title: "Juego finalizado",
+                        text: "¡GANASTE!",
+                        icon: "success"
+                    });
+                }
+            } else {
+                vidas--
+                wrongMsg.innerText = "Ups!. Te has equivocado"
+
+                if (vidas == 0) {
+                    swal.fire({
+                        title: "Juego finalizado",
+                        text: "¡HAS GASTADO TODAS TUS VIDAS!",
+                        icon: "error"
+                    });
+                    
+                    exit = setTimeout(salir, 4000)
+                }
+            }
+        })
+
+    })
+}
+
 function salir() {
     location.reload()
 }
@@ -146,6 +239,8 @@ function loadNombres(jugadores) {
     }
     return nombresJugadores;
 }
+
+
 
 
 

@@ -76,10 +76,16 @@ function cargaJugadoresG(jugadoresCargados, nombresDesordenados) {
 
     let names = document.querySelectorAll('.names')
     let wrongMsg = document.querySelector('.wrong')
+    let intentos = document.querySelector('.intentos')
+
     let points = 0;
-    let vidas = 3;
+    let vidas = 2;
 
     names = [...names]
+
+    intentos.innerHTML = `
+                 <p>Vidas: 2/2 </p>   
+                `
         
     names.forEach(name => {
         name.addEventListener('dragover', event=>{
@@ -90,6 +96,8 @@ function cargaJugadoresG(jugadoresCargados, nombresDesordenados) {
             const dragElementData = event.dataTransfer.getData('text');
             
             let playerElement = document.querySelector(`#${dragElementData}`);
+
+            
             
             if (event.target.innerText == dragElementData) {
                 points++
@@ -106,6 +114,10 @@ function cargaJugadoresG(jugadoresCargados, nombresDesordenados) {
                 }
             } else {
                 vidas--
+
+                intentos.innerHTML = `
+                 <p>Vidas: ${vidas}/2 </p>   
+                `
                 wrongMsg.innerText = "Ups!. Te has equivocado"
 
                 if (vidas == 0) {

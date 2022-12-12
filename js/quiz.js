@@ -67,7 +67,7 @@ function seleccionarPreguntaAleatoria() {
         swal.fire({
           title: "Juego finalizado",
           text:
-            "Puntuación: " + preguntas_correctas + "/" + (preguntas_hechas - 1),
+            "Puntuación: " + preguntas_correctas + "/" + (preguntas_hechas),
           icon: "success"
           
         });

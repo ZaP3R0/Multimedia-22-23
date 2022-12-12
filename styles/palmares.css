@@ -1,0 +1,93 @@
+.palmares {
+    background-image: url(../img/Palmares.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    margin-bottom: -20px;
+}
+
+.trophy {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.trophy-date {
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+}
+
+.palmares-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 25px;
+    font-family: 'Noto sans';
+    color: red;
+}
+
+.palmares-title span {
+    color: #fcd20a;
+}
+
+.trophy-name {
+   font-size: 20px;
+   text-transform: uppercase;
+   margin-top: 5px;
+   font-weight: bold;
+   color: #fcd20a;
+}
+
+.trophy-description {
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 10px;
+    color: white;
+    font-size: 17px;
+}
+
+@media only screen and (min-width: 950px) {
+    .trophy {
+        padding: 0;
+    }
+    
+    .palmares-grid {
+        display: grid;
+        grid-template-columns: auto 2px auto;
+        gap: 20px 70px;
+        padding: 70px;
+        justify-content: center;
+        max-width: 980px;
+        margin: 0 auto;
+    }
+
+    .line {
+        background-color: #000056;
+        position: relative;
+    }
+
+    .line::before,
+    .line::after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: #000056;
+        border-radius: 50%;
+        position: absolute;
+        top: -20px;
+        left: -9px;
+    }
+
+    .trophy-left {
+        text-align: right;
+    }
+
+    .line::after {
+        top: 100%;
+    }
+}
+

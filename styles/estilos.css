@@ -1,201 +1,276 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-  html {
-    height: 100%;
-  }
-  
-  body {
-    font-family: sans-serif;
-    margin: 0; /*Eliminamos los margenes de la ventana*/
-    position: relative; /*Para que el footer se quede al final*/
-    min-height: 100vh; /*Para que el body mida como minimo lo que mida el viewport. Esto hace que el footer se quede al final*/
-  }
-  
-  .header {
-    background-color: #0769e9;
-    height: 80px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-  }
-  
-  .nav {
-    display: flex;
-    justify-content: space-between;
-  
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .nav .rfef {
-    margin-top: 4px;
-    justify-content: center;
-    height: 70px;
-  }
-
-  .videoI {
-    width: 1080px;
-    height: 720px;
-    justify-content: center;
-    text-align: center;
-    padding-top: 120px;
-    margin: 0 auto;
-  }
-  
-  .nav-link {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  .logo {
-    padding: 0 40px;
-    line-height: 80px;
-    height: 70px;
-    width: auto;
-  }
-  
-  .nav-menu {
-    display: flex;
-    margin-right: 40px;
-    list-style: none;
-  }
-  
-  .nav-menu-item {
-    font-size: 18px;
-    margin: 0 10px;
-    line-height: 80px;
-    text-transform: uppercase;
-    width: max-content;
-  }
-
-  .container-body {
-    width: 70%;
-    min-width: 320px;
-    margin: 0 auto;
-    display: flow-root;
-    max-width: 100%;
+/*Cuerpo*/
+html {
+  height: 100%;
 }
-  
-  .nav-menu-link {
-    padding: 8px 12px;
-    border-radius: 20px;
-    transition: all 500ms ease;
-  }
 
-  .nav-menu-link:hover,
-  .nav-menu-link_active {
-    background-color: #083057;
-  }
+body {
+  font-family: sans-serif;
+  line-height: 1.4em;
+  margin: 0; /*Eliminamos los margenes de la ventana*/
+  position: relative; /*Para que el footer se quede al final*/
+  padding-bottom: 10rem; /*Para que el footer se quede al final*/
+  min-height: 100vh; /*Para que el body mida como minimo lo que mida el viewport. Esto hace que el footer se quede al final*/
+  background-image: url(../img/fondo_quiz.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
 
-  footer {
-    background: #0769e9;
-    text-align: center;
-    padding: 0.5rem 0;
-    position: absolute; /*Para que el footer se quede al final*/
-    bottom: 0; /*Para que el footer se quede al final*/
-    width: 100%; /*Para que el footer se quede al final*/
-  }
+.inicio {
+  padding-bottom: 5rem;
+}
 
-  .redes-sociales {
-      display: flex;
+.videoI {
+  padding-top: 180px;
+  justify-content: center;
+}
+
+
+
+/*Título*/
+h1 {
+  font-size: 2rem;
+  line-height: 1.3em;
+}
+
+/*Párrafos*/
+p {
+  margin-bottom: 1.6em;
+}
+
+/*Contenidos*/
+.container-body {
+  width: 70%;
+  min-width: 320px;
+  margin: 0 auto;
+  display: flow-root;
+  max-width: 100%;
+}
+
+.container-header {
+  width: 90%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+/*Cabecera*/
+.header {
+  background: #000056;
+  padding: 2rem 0; 
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+/*Contenido del header*/
+.header a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  padding: 0 20px;
+  line-height: 60px;
+  height: 55px;
+}
+
+/*Logo nav*/
+.logo-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*Centrar el logo en el header*/
+  flex-wrap: wrap; /*Para que al reducir la página los elementos no se fuerzen a estar uno al lado de otro y pasen a estar debajo*/
+}
+
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+/*Para que las opciones del menú se coloquen horizontalmente*/
+.navigation ul li {
+  display: inline-block;
+}
+
+.navigation ul li a {
+  display: flex;
+  padding: 0.5rem 1rem;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 500ms ease;
+  width: max-content;
+}
+
+.logo {
+  letter-spacing: 5px;
+  font-size: 40px;
+}
+
+.navigation ul li a:hover {
+  background: #fcd20a;
+  border-radius: 50px;
+}
+
+/*Pie de página*/
+.footer {
+  background: #000056;
+  text-align: center;
+  padding: 0.5rem 0;
+  position: absolute; /*Para que el footer se quede al final*/
+  bottom: 0; /*Para que el footer se quede al final*/
+  width: 100%; /*Para que el footer se quede al final*/
+}
+
+/*Color de las letras del footer*/
+.footer p {
+  font-weight: bold;
+  color: white;
+}
+
+.button-menu {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 20px;
+  padding: 0 10px;
+  display: none;
+}
+
+/*Estilo de los botones del footer*/
+.container-footer a{
+  color: white;
+  background: none;
+  border: none;
+  font-size: 30px;
+  text-align: center;
+  line-height: 70px;
+  text-decoration: none;
+  border-radius: 50%;
+  -o-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.container-footer .icon-button {
+  background-color: #5a5a5a;
+  border-radius: 3.6rem;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 2.0rem;
+  height: 3.6rem;
+  line-height: 3.6rem;
+  margin: 0 5px;
+  position: relative;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 3.6rem;
+}
+
+/* Circle */
+.container-footer .icon-button span {
+  border-radius: 0;
+  display: block;
+  height: 0;
+  left: 50%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: all 0.3s;
+     -moz-transition: all 0.3s;
+       -o-transition: all 0.3s;
+          transition: all 0.3s;
+  width: 0;
+}
+
+.container-footer .icon-button:hover span {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 3.6rem;
+  margin: -1.8rem;
+}
+
+
+.container-footer .github span {
+  background-color: #252932;
+}
+
+/* Icons */
+.container-footer i {
+  background: none;
+  color: white;
+  height: 3.6rem;
+  left: 0;
+  line-height: 3.6rem;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all 0.3s;
+     -moz-transition: all 0.3s;
+       -o-transition: all 0.3s;
+          transition: all 0.3s;
+  width: 3.6rem;
+  z-index: 10;
+}
+
+
+@media only screen and (min-width: 1080px) {
+  .videoI {
+      padding-top: 140px;
       justify-content: center;
-  } 
-
-  .redes-sociales i {
-    font-size: 30px;
-    padding: 20px;
-    color: white;
-    transition: all 500ms ease;
+      width: 940px;
+      justify-content: center;
+      margin: 0 auto;
   }
+}
 
-  .redes-sociales i:hover {
-    border-radius: 50px;
-    background: #083057;
-  }
-
-  footer .titulo-seccion,
-  footer .copy {
-      color: white;
-      text-align: center;
-      padding-top: 20px;
-  }
+/*ADAPTACIÓN PARA MÓVILES*/
+@media only screen and (max-width: 880px) {
   
-  /* TOGGLE */
-  .nav-toggle {
-    color: white;
-    background: none;
-    border: none;
-    font-size: 30px;
-    padding: 0 20px;
-    line-height: 60px;
-    cursor: pointer;
-  
-    display: none;
-  }
-
-   /* MOBILE */
-  @media (max-width: 768px) {
-    body {
-      padding-top: 70px;
-    }
-  
-    .header {
-      height: 60px;
-    }
-  
-    .logo {
-      padding: 0 20px;
-      line-height: 60px;
-      height: 55px;
-    }
-
-    .nav .rfef {
-      margin-top: 5px;
-      height: 50px;
-    }
-  
-    .nav-menu {
-      flex-direction: column;
-      align-items: center;
-      margin: 0;
-      background-color: #2c3e50;
-      position: fixed;
-      top: 60px;
-      width: 100%;
-      padding: 20px 0;
-  
-      height: calc(100% - 60px);
-      overflow-y: auto;
-  
-      left: 100%;
-      transition: left 0.3s;
-    }
-  
-    .nav-menu-item {
-      line-height: 70px;
-    }
-  
-    .nav-menu-link:hover,
-    .nav-menu-link_active {
-      background: none;
-      color: #83c5f7;
-    }
-  
-    .nav-toggle {
+  .button-menu {
       display: block;
-    }
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+  }
+
+  .navigation {
+      width: 100%;
+      margin-top: 1rem; /*Para dar espacio cuando se alineen con el titulo*/
+  }
   
-    .nav-menu_visible {
-      left: 0;
-    }
+  .navigation ul {
+      display: none;
+  }
+ 
+  .navigation ul.show {
+      display: block;
+  }
   
-    .nav-toggle:focus:not(:focus-visible) {
-      outline: none;
-    }
+  .navigation ul li {
+      display: block;
+  }
+  
+  .navigation ul li a {
+      display: block;
+      padding: 0.5rem 0rem;
+      font-size: 18px;
+      font-weight: bold;
+      -o-transition: all 500ms ease;
+      -webkit-transition: all 500ms ease;
+      transition: all 500ms ease;
+  }
+  
+  .logo {
+      letter-spacing: 10px;
+      font-size: 30px;
+  }
+  
+  .navigation ul li a:hover {
+      background: dodgerblue;
+      border-radius: 50px;
+  }
 }
 

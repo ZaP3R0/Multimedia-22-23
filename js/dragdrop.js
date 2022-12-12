@@ -111,6 +111,8 @@ function cargaJugadoresG(jugadoresCargados, nombresDesordenados) {
                         text: "¡GANASTE!",
                         icon: "success"
                     });
+
+                    exit = setTimeout(salir, 4000)
                 }
             } else {
                 vidas--

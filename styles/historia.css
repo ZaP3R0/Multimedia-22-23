@@ -1,0 +1,39 @@
+.historia {
+    background-image: url(../img/FondoHistoria.jpg);
+    width: 100%;
+    margin-bottom: -20px;
+}
+.titulo-historia {
+    text-align: center;
+    font-weight: bold;
+    color: red;
+    font-size: 40px;
+    margin: 25px;
+    font-family: 'Noto sans';
+}
+
+.titulo-historia span {
+    color: #fcd20a;
+}
+
+.subtitulo-historia {
+    text-align: center;   
+    color: #fcd20a; 
+    font-weight: bold;
+}
+
+.container-body p {
+    color: white;
+    text-align: center;
+    font-size: 17px;
+}
+
+
+@media only screen and (max-width: 950px) {
+    .titulo-historia {
+        text-align: center;
+        font-size: 30px;
+        margin: 25px;
+        font-family: 'Noto sans';
+    }
+}

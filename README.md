@@ -2,8 +2,8 @@
 
 Desarrollar una aplicación multimedia de video interactivo que contemple lo
 siguiente:
-  – Visualización y/o reproducción
+    – Visualización y/o reproducción
   
-  – Interacción con usuario y/o con otros sistemas Hw/Sw
+    – Interacción con usuario y/o con otros sistemas Hw/Sw
   
-  – Compresión
+    – Compresión
